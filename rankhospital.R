@@ -57,8 +57,12 @@ rankHospital <- function(state, outcome, num = "best") {
         
     }
     
-    if (num == "worst") {
+    else if (num == "worst") {
         location = nrow(pickedStateRows)
+    }
+    
+    else {
+        location = num
     }
     
     sp <<- pickedStateRows
